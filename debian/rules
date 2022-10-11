@@ -1,0 +1,39 @@
+#!/usr/bin/make -f
+API_VERSION          := 1.0.1
+VERSION              := 1.2.0
+PACKAGE              := libstax-java
+export JAVA_HOME := /usr/lib/jvm/default-java
+export CLASSPATH := /usr/share/java/xml-apis.java:/usr/share/java/junit.jar
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	dh_auto_build -- ri_bin_dist javadoc
+
+override_dh_install:
+	dh_install
+	mkdir -p debian/tmp
+	cp debian/stax-api.pom debian/tmp/stax-api-$(API_VERSION).pom
+	dh_install -p$(PACKAGE) --sourcedir=debian/tmp stax-api-$(API_VERSION).pom /usr/share/maven-repo/stax/stax-api/$(API_VERSION)/
+	cp build/stax-api-$(API_VERSION).jar debian/tmp/stax-api-$(API_VERSION).jar
+	dh_install -p$(PACKAGE) --sourcedir=debian/tmp stax-api-$(API_VERSION).jar /usr/share/maven-repo/stax/stax-api/$(API_VERSION)/
+	dh_link -p$(PACKAGE) /usr/share/maven-repo/stax/stax-api/$(API_VERSION)/stax-api-$(API_VERSION).jar /usr/share/java/stax-api-$(API_VERSION).jar
+	dh_link -p$(PACKAGE) /usr/share/maven-repo/stax/stax-api/$(API_VERSION)/stax-api-$(API_VERSION).jar /usr/share/java/stax-api.jar
+	cp debian/stax-api.pom debian/tmp/stax-api-debian.pom
+	perl -p -i -e 's/<version>$(API_VERSION)/<version>debian/' debian/tmp/stax-api-debian.pom
+	dh_install -p$(PACKAGE) --sourcedir=debian/tmp stax-api-debian.pom /usr/share/maven-repo/stax/stax-api/debian/
+	dh_link -p$(PACKAGE) /usr/share/maven-repo/stax/stax-api/$(API_VERSION)/stax-api-$(API_VERSION).jar /usr/share/maven-repo/stax/stax-api/debian/stax-api-debian.jar
+	cp debian/stax.pom debian/tmp/stax-$(VERSION).pom
+	dh_install -p$(PACKAGE) --sourcedir=debian/tmp stax-$(VERSION).pom /usr/share/maven-repo/stax/stax/$(VERSION)/
+	cp build/stax-$(VERSION)-dev.jar debian/tmp/stax-$(VERSION).jar
+	dh_install -p$(PACKAGE) --sourcedir=debian/tmp stax-$(VERSION).jar /usr/share/maven-repo/stax/stax/$(VERSION)/
+	dh_link -p$(PACKAGE) /usr/share/maven-repo/stax/stax/$(VERSION)/stax-$(VERSION).jar /usr/share/java/stax-$(VERSION).jar
+	dh_link -p$(PACKAGE) /usr/share/maven-repo/stax/stax/$(VERSION)/stax-$(VERSION).jar /usr/share/java/stax.jar
+	cp debian/stax.pom debian/tmp/stax-debian.pom
+	perl -p -i -e 's/<version>$(VERSION)/<version>debian/' debian/tmp/stax-debian.pom
+	dh_install -p$(PACKAGE) --sourcedir=debian/tmp stax-debian.pom /usr/share/maven-repo/stax/stax/debian/
+	dh_link -p$(PACKAGE) /usr/share/maven-repo/stax/stax/$(VERSION)/stax-$(VERSION).jar /usr/share/maven-repo/stax/stax/debian/stax-debian.jar
+
+get-orig-source:
+	-uscan --download-current-version --force-download --rename

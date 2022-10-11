@@ -1,0 +1,10 @@
+Document: libstax-java-doc
+Title: Programmer API for StAX RI
+Author: Codehaus, BEA
+Abstract: Programmer API of the StAX RI library, a library providing
+ the standard pull parser implementation for JSR-173 specification.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/libstax-java/api/index.html
+Files: /usr/share/doc/libstax-java/api/*

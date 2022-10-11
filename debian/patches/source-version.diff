@@ -1,0 +1,49 @@
+From: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Date: Wed, 4 Apr 2018 00:08:24 +0200
+Subject: source-version
+
+===================================================================
+---
+ build.xml | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/build.xml b/build.xml
+index 37d5987..30b8975 100644
+--- a/build.xml
++++ b/build.xml
+@@ -71,7 +71,7 @@
+     <!--mkdir dir="${api_src_dir}"/-->
+     <!--unjar src="${jar_api}" dest="${class_dir}"/-->
+     <javac srcdir="${src_api}"
+-      source="1.2" target="1.2"
++      source="1.4" target="1.4"
+       includes="${api_dirs}"
+       destdir="${class_dir}"
+       debug="true">
+@@ -105,7 +105,7 @@
+   <target name="compile" depends="init,api">
+     <!--javac srcdir="${src}:${api_src_dir}"-->
+     <javac srcdir="${src}"
+-      source="1.2" target="1.2"
++      source="1.4" target="1.4"
+       includes="${topdirs}"
+       destdir="${class_dir}"
+       debug="true">
+@@ -118,7 +118,7 @@
+ 
+   <target name="samples" depends="compile">
+     <!--javac srcdir="${src}:${api_src_dir}"-->
+-    <javac srcdir="${src}" source="1.2" target="1.2"
++    <javac srcdir="${src}" source="1.4" target="1.4"
+       destdir="${class_dir}" debug="true">
+       <include name="samples/*.java" />
+       <classpath>
+@@ -137,7 +137,7 @@
+   </target>
+   <target name="test_compile" depends="api, test_init">
+     <javac srcdir="${src}" includes="org/codehaus/stax/test/**/*.java"
+-      source="1.2" target="1.2"
++      source="1.4" target="1.4"
+       destdir="${test_class_dir}"
+       debug="true">
+       <classpath>

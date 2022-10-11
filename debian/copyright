@@ -1,0 +1,73 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+
+Files: *
+Copyright: 2002-2004, BEA Systems.
+License: Apache-2.0
+
+Files: src/test/XmlEscapingTest.java
+Copyright: 2001, 2002, International Business Machines, Inc.
+           2002-2004, The Apache Software Foundation.
+License: Apache-2.0
+
+Files: src/com/bea/xml/stream/reader/XmlReader.java
+Copyright: 1999, Sun Microsystems, Inc.
+           2002-2004, The Apache Software Foundation.
+License: Apache-2.0
+
+Files: src/com/bea/xml/stream/reader/XmlChars.java
+Copyright: 2002-2004, The Apache Software Foundation.
+License: Apache-2.0
+
+Files: src/com/bea/xml/stream/MXParser.java
+Copyright:2002, Extreme! Lab, Indiana University.
+License: BSD-ExtremeLab
+
+Files: debian/*
+Copyright: 2009, Ludovic Claude <ludovic.claude@laposte.net>
+License: Apache-2.0
+
+License: Apache-2.0
+  On Debian GNU/Linux system you can find the complete text of the
+  Apache 2.0 license in '/usr/share/common-licenses/Apache-2.0'.
+
+License: BSD-ExtremeLab
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+  .
+  1. Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+  .
+  2. Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in
+     the documentation and/or other materials provided with the
+     distribution.
+  .
+  3. The end-user documentation included with the redistribution,
+     if any, must include the following acknowledgment:
+        "This product includes software developed by the Indiana
+         University Extreme! Lab (http://www.extreme.indiana.edu/)."
+     Alternately, this acknowledgment may appear in the software itself,
+     if and wherever such third-party acknowledgments normally appear.
+  .
+  4. The names "Indiana University" and "Indiana University
+     Extreme! Lab" must not be used to endorse or promote products
+     derived from this software without prior written permission. For
+     written permission, please contact http://www.extreme.indiana.edu/.
+  .
+  5. Products derived from this software may not use "Indiana
+     University" name nor may "Indiana University" appear in their name,
+     without prior written permission of the Indiana University.
+  .
+  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED
+  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  DISCLAIMED.  IN NO EVENT SHALL THE APACHE SOFTWARE FOUNDATION OR
+  ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+  USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+  OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  SUCH DAMAGE.

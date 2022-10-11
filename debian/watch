@@ -1,0 +1,3 @@
+#Codehaus is gone
+#version=3
+#http://dist.codehaus.org/stax/distributions/stax-src-([\d\.]*).zip debian debian/orig-tar.sh

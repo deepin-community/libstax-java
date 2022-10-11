@@ -1,0 +1,40 @@
+libstax-java (1.2.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * Switch to compat level 11.
+  * wrap-and-sort -sa.
+  * Use only Build-Depends field.
+  * Declare compliance with Debian Policy 4.1.3.
+  * Move the package to salsa.debian.org.
+  * Switch from cdbs to dh sequencer.
+  * Build for source/target 1.7.
+  * Add encoding.patch and fix FTBFS with Java 9. (Closes: #893289)
+  * Use copyright format 1.0.
+  * Fix paths in libstax-java-doc.doc-base due to compat 11.
+  * Change homepage to tracker.debian.org because codehaus.org is gone.
+
+ -- Markus Koschany <apo@debian.org>  Wed, 04 Apr 2018 00:12:31 +0200
+
+libstax-java (1.2.0-3) unstable; urgency=low
+
+  * Team upload.
+  * Switch to default-jdk. (Closes: #642119),
+  * Bump Standards-Version to 3.9.2. No changes were required.
+  * Update Vcs-* fields.
+  * Make copyright file DEP-5 compliant.
+
+ -- Miguel Landaeta <miguel@miguel.cc>  Mon, 19 Sep 2011 13:24:01 -0430
+
+libstax-java (1.2.0-2) unstable; urgency=low
+
+  * Team upload.
+  * Switch to source format 3.0.
+  * Change Standards-Version: 3.9.1.
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 16 Aug 2011 23:02:05 +0200
+
+libstax-java (1.2.0-1) unstable; urgency=low
+
+  * Initial release. (Closes: #535700)
+
+ -- Ludovic Claude <ludovic.claude@laposte.net>  Sat, 04 Jul 2009 00:38:47 +0100
